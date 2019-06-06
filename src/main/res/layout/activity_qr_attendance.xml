@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="top"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:text="Scan QR Code"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="4dp" />
+
+        <fragment
+            android:id="@+id/barcode"
+            android:name="com.google.android.gms.samples.vision.barcodereader.BarcodeCapture"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:gvb_auto_focus="true"
+            app:gvb_code_format="code_39|aztec"
+            app:gvb_flash="false"
+           />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary">
+
+    </View>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Information"
+        android:layout_gravity="center"
+        android:textSize="20sp"/>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Student Email"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/std_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="2dp"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:elevation="10dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Student Name"
+            android:textSize="20sp" />
+
+
+
+        <TextView
+            android:id="@+id/std_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/mark_atten"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFF"
+            android:padding="10dp"
+            android:clickable="true"
+            android:onClick="atten_bt"
+            android:layout_height="wrap_content"
+            android:text="Mark Your Attendance"/>
+    </LinearLayout>
+</ScrollView>
